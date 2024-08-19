@@ -510,7 +510,7 @@ namespace obf {
         }
         #else
         for (volatile int i = 0; i < size; i++)
-            data[i] = data[i] ^ CAST>(T, key + i); // no cflow (optimized+unsafe)
+            data[i] = data[i] ^ CAST(T, key + i); // no cflow (optimized+unsafe)
         #endif
     }
 
